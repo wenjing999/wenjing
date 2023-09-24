@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 46,
    "metadata": {},
    "outputs": [
     {
@@ -32,26 +32,26 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 47,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "https://github.com/imAShiiiiiii/statistic-2023\n"
+      "https://github.com/wenjing999/wenjing\n"
      ]
     }
    ],
    "source": [
     "for item in 学生信息:\n",
-    "    if item[\"姓名\"] == \"吴娅蕾\":\n",
+    "    if item[\"姓名\"] == \"石文静\":\n",
     "        print(item[\"Github仓库地址\"])"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 48,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -64,41 +64,29 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 49,
    "metadata": {},
    "outputs": [
     {
      "data": {
       "text/plain": [
-       "'https://github.com/lanyirongacyl/statistic'"
+       "'https://github.com/wenjing999/wenjing'"
       ]
      },
-     "execution_count": 7,
+     "execution_count": 49,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "get_github_url('P221014511', 学生信息)"
+    "get_github_url('P221014712', 学生信息)"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
+   "execution_count": 50,
    "metadata": {},
-   "outputs": [
-    {
-     "ename": "ModuleNotFoundError",
-     "evalue": "No module named 'requests'",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[1;31mModuleNotFoundError\u001b[0m                       Traceback (most recent call last)",
-      "\u001b[1;32mc:\\Users\\Lenovo\\Desktop\\wenjing\\作业2.ipynb 单元格 5\u001b[0m line \u001b[0;36m1\n\u001b[1;32m----> <a href='vscode-notebook-cell:/c%3A/Users/Lenovo/Desktop/wenjing/%E4%BD%9C%E4%B8%9A2.ipynb#W4sZmlsZQ%3D%3D?line=0'>1</a>\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mrequests\u001b[39;00m\n\u001b[0;32m      <a href='vscode-notebook-cell:/c%3A/Users/Lenovo/Desktop/wenjing/%E4%BD%9C%E4%B8%9A2.ipynb#W4sZmlsZQ%3D%3D?line=1'>2</a>\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mimport\u001b[39;00m datetime\n\u001b[0;32m      <a href='vscode-notebook-cell:/c%3A/Users/Lenovo/Desktop/wenjing/%E4%BD%9C%E4%B8%9A2.ipynb#W4sZmlsZQ%3D%3D?line=3'>4</a>\u001b[0m \u001b[39mdef\u001b[39;00m \u001b[39mget_push_count\u001b[39m(repo_url):\n\u001b[0;32m      <a href='vscode-notebook-cell:/c%3A/Users/Lenovo/Desktop/wenjing/%E4%BD%9C%E4%B8%9A2.ipynb#W4sZmlsZQ%3D%3D?line=4'>5</a>\u001b[0m     \u001b[39m# 构造API请求URL\u001b[39;00m\n",
-      "\u001b[1;31mModuleNotFoundError\u001b[0m: No module named 'requests'"
-     ]
-    }
-   ],
+   "outputs": [],
    "source": [
     "import requests\n",
     "from datetime import datetime\n",
@@ -129,7 +117,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 51,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -158,97 +146,100 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 52,
    "metadata": {},
    "outputs": [
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "c:\\Program Files\\Python38\\lib\\site-packages\\urllib3\\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.github.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings\n",
+      "c:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\urllib3\\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.github.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings\n",
       "  warnings.warn(\n"
      ]
     },
     {
      "data": {
       "text/plain": [
-       "(1, '2023-09-13')"
+       "(1, '2023-09-21')"
       ]
      },
-     "execution_count": 16,
+     "execution_count": 52,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "get_push_count('https://github.com/lanyirongacyl/statistic')"
+    "get_push_count('https://github.com/wenjing999/wenjing')"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 53,
    "metadata": {},
    "outputs": [
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "c:\\Program Files\\Python38\\lib\\site-packages\\urllib3\\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.github.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings\n",
+      "c:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\urllib3\\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.github.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings\n",
       "  warnings.warn(\n"
      ]
     },
     {
      "data": {
       "text/plain": [
-       "[datetime.datetime(2023, 9, 7, 4, 11, 3),\n",
-       " datetime.datetime(2023, 9, 7, 2, 58, 50),\n",
-       " datetime.datetime(2023, 9, 6, 2, 8, 52),\n",
-       " datetime.datetime(2023, 9, 6, 2, 6, 46),\n",
-       " datetime.datetime(2023, 8, 30, 2, 20, 58)]"
+       "[datetime.datetime(2023, 9, 21, 4, 13, 6),\n",
+       " datetime.datetime(2023, 9, 21, 3, 44, 43),\n",
+       " datetime.datetime(2023, 9, 20, 2, 25, 50),\n",
+       " datetime.datetime(2023, 9, 14, 4, 29, 44),\n",
+       " datetime.datetime(2023, 9, 14, 2, 59, 58),\n",
+       " datetime.datetime(2023, 9, 14, 2, 59, 15),\n",
+       " datetime.datetime(2023, 9, 7, 4, 0, 19),\n",
+       " datetime.datetime(2023, 8, 31, 11, 48, 11)]"
       ]
      },
-     "execution_count": 14,
+     "execution_count": 53,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "get_push_time('https://github.com/yangjh-xbmu/statistic-2023-2')"
+    "get_push_time('https://github.com/wenjing999/wenjing')"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": 54,
    "metadata": {},
    "outputs": [
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "<>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?\n",
-      "<>:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?\n",
-      "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\ipykernel_23460\\406053058.py:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?\n",
-      "  'get_push_time'('https://github.com/yangjh-xbmu/statistic-2023-2')\n",
-      "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\ipykernel_23460\\406053058.py:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?\n",
-      "  'get_push_time'('https://github.com/yangjh-xbmu/statistic-2023-2')\n",
-      "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\ipykernel_23460\\406053058.py:1: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?\n",
-      "  'get_push_time'('https://github.com/yangjh-xbmu/statistic-2023-2')\n"
+      "c:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python38\\lib\\site-packages\\urllib3\\connectionpool.py:1095: InsecureRequestWarning: Unverified HTTPS request is being made to host 'api.github.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings\n",
+      "  warnings.warn(\n"
      ]
     },
     {
-     "ename": "TypeError",
-     "evalue": "'str' object is not callable",
-     "output_type": "error",
-     "traceback": [
-      "\u001b[1;31m---------------------------------------------------------------------------\u001b[0m",
-      "\u001b[1;31mTypeError\u001b[0m                                 Traceback (most recent call last)",
-      "\u001b[1;32mc:\\Users\\Lenovo\\Desktop\\wenjing\\作业2.ipynb 单元格 9\u001b[0m line \u001b[0;36m1\n\u001b[1;32m----> <a href='vscode-notebook-cell:/c%3A/Users/Lenovo/Desktop/wenjing/%E4%BD%9C%E4%B8%9A2.ipynb#X11sZmlsZQ%3D%3D?line=0'>1</a>\u001b[0m \u001b[39m'\u001b[39;49m\u001b[39mget_push_time\u001b[39;49m\u001b[39m'\u001b[39;49m(\u001b[39m'\u001b[39;49m\u001b[39mhttps://github.com/yangjh-xbmu/statistic-2023-2\u001b[39;49m\u001b[39m'\u001b[39;49m)\n",
-      "\u001b[1;31mTypeError\u001b[0m: 'str' object is not callable"
-     ]
+     "data": {
+      "text/plain": [
+       "[datetime.datetime(2023, 9, 21, 4, 13, 6),\n",
+       " datetime.datetime(2023, 9, 21, 3, 44, 43),\n",
+       " datetime.datetime(2023, 9, 20, 2, 25, 50),\n",
+       " datetime.datetime(2023, 9, 14, 4, 29, 44),\n",
+       " datetime.datetime(2023, 9, 14, 2, 59, 58),\n",
+       " datetime.datetime(2023, 9, 14, 2, 59, 15),\n",
+       " datetime.datetime(2023, 9, 7, 4, 0, 19),\n",
+       " datetime.datetime(2023, 8, 31, 11, 48, 11)]"
+      ]
+     },
+     "execution_count": 54,
+     "metadata": {},
+     "output_type": "execute_result"
     }
    ],
    "source": [
-    "'get_push_time'('https://github.com/yangjh-xbmu/statistic-2023-2')"
+    "get_push_time('https://github.com/wenjing999/wenjing')"
    ]
   }
  ],
