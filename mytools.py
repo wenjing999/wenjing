@@ -2,6 +2,7 @@
 import pandas as pd
 from pyreadstat import pyreadstat
 import matplotlib.pyplot as plt
+from scipy import stats
 
 # 绘图设置
 plt.rcParams["font.sans-serif"] = ["SimHei"]  # 设置字体
@@ -28,7 +29,7 @@ def 绘制单个类别柱状图(数据表,变量:str):
 
 
 def 读取SPSS数据(文件所在位置及名称):
-    """ 读取SPSS文件，保留标签内容和有序变量顺序 """
+    """ 读取SPSS文件,保留标签内容和有序变量顺序 """
     result, metadata = pyreadstat.read_sav(
         文件所在位置及名称, apply_value_formats=True, formats_as_ordered_category=True)
     return result, metadata
@@ -99,7 +100,18 @@ def 相关系数强弱判断(相关系数值):
 def 制作交叉表(数据表, 自变量, 因变量):
     return pd.crosstab(数据表[自变量], 数据表[因变量], normalize='columns', margins=True)
 
-  
-
-
-
+def 单变量参数估计(file_path,confidence_level):
+ file_path = R"data/movie_data_cleaned.csv"
+ df_movies = pd.read_csv(file_path)
+# 计算均值和标准误差
+ mean = df_movies['average'].mean()
+ std_error = stats.sem(df_movies['average'])
+ # 设定置信水平
+ confidence_level = 0.95
+ # 设定自由度
+ 自由度 = len(df_movies['average']) - 1
+ # 计算置信区间
+ confidence_interval = stats.t.interval(confidence_level, 自由度, loc=mean, scale=std_error)
+ # 输出结果
+ print(F"均值：{mean: .2f}")
+ print(F"均值在置信水平{confidence_level}下的置信区间为：", confidence_interval)
